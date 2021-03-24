@@ -1,0 +1,41 @@
+.App {
+  width:60vw;
+  margin: auto;
+}
+.header {
+  background-color: #e651cd;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.image {
+  height: 10vw;
+}
+legend,th {
+  color: rgb(38, 3, 54);
+  font-size: larger;
+}
+td:nth-child(even){
+  background: rgb(173, 141, 163);
+  padding: 10px;
+  margin: 5px;}
+label{
+  color: rgb(187, 8, 142);
+  font-size: large;
+}
+.table{
+  background-color: #6ca7c2;
+  color: rgb(81, 109, 4);
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
