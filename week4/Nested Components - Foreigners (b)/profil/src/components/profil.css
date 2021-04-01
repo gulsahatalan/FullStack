@@ -1,0 +1,35 @@
+img{
+    width: 3vw;
+}
+.personAvatar{
+    width: 5vw;
+}
+.profil{
+    border: 2px solid black;
+    border-radius: 1%;
+    margin: 2vw;
+}
+.personal{
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw;
+    margin: auto;
+    font-size: large;
+}
+
+.children{
+    background-color: rgb(221, 20, 188);
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw;
+    margin: auto;
+}
+
+.friends{
+    background-color: rgb(134, 204, 22);
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw; 
+    margin: auto;
+}
