@@ -58,12 +58,12 @@ export default function Quiz() {
       next();
     }
   };
-  console.log(quiz.totalQuestion);
   if (quiz.step == quiz.totalQuestion) {
     return <Result true={score.trueScore} />;
   } else {
     return (
-      <div className="quiz">
+      // stateleri  gonderiyoruz 
+      <div className="quiz">      
         <Header />
         <Question
           list={quiz.data[quiz.step]}
