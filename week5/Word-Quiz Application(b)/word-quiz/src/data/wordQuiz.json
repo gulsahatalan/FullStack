@@ -1,0 +1,62 @@
+ [
+  {
+    "id": 1,
+    "deutch": "die Wirtschaft",
+    "turkish": ["ekonomi", "ekonomik", "ucuz", "bedava"],
+    "answer":"ekonomi"
+  },
+  {
+    "id": 2,
+    "deutch": "auspacken",
+    "turkish": ["paketlemek", "paket acmak", "paket", "tasimak"],
+    "answer":"paket acmak"
+  },
+  {
+    "id": 3,
+    "deutch": "der Bart",
+    "turkish": ["sakal", "biyik", "tuy", "kutu"],
+    "answer":"sakal"
+  },
+  {
+    "id": 4,
+    "deutch": "der Rasen",
+    "turkish": ["cim", "tepe", "yukseklik", "dag"],
+    "answer":"cim"
+  },
+  {
+    "id": 5,
+    "deutch": "der Staub",
+    "turkish": ["toz", "supurge", "emici", "delik"],
+    "answer":"toz"
+  },
+  {
+    "id": 6,
+    "deutch": "ernst",
+    "turkish": ["ciddi", "ilk", "oncelikli", "degerli"],
+    "answer":"ciddi"
+  },
+  {
+    "id": 7,
+    "deutch": "die Ecke",
+    "turkish": ["kose", "teras", "tapu", "sivri"],
+    "answer":"kose"
+  },
+  {
+    "id": 8,
+    "deutch": "die Informatikerin",
+    "turkish": ["bilgisayar uzmani", "bilgisayar bilimi", "sanal", "bilgisayarlar"],
+    "answer":"bilgisayar uzmani"
+  },
+  {
+    "id": 9,
+    "deutch": "fruchtig",
+    "turkish": ["tatli", "meyve bahcesi", "meyveli", "meyvesiz"],
+    "answer":"meyveli"
+  },
+  {
+    "id": 10,
+    "deutch": "das Ziel",
+    "turkish": ["hedef", "saat", "basari", "deney"],
+    "answer":"hedef"
+  }
+]

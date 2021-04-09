@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+}
+.header {
+  background-color: rgb(154, 156, 10);
+  width: 70vw;
+  height: 20vh;
+  margin: auto;
+  line-height: 20vh;
+  font-family: monospace;
+  color: #61dafb;
+  font-size: 4vw;
+}
+.skores {
+  width: 70vw;
+  height: 15vh;
+  margin: auto;
+  line-height: 15vh;
+  background-color: darksalmon;
+}
+.result {
+  margin: 15vh;
+  height: 3vh;
+  line-height: 3vh;
+  color: darkslateblue;
+  font-style: oblique;
+  font-size: 5vw;
+  font-weight: bolder;
+}
+
+.option-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+button {
+  background-color: darkgreen;
+  color: whitesmoke;
+  margin: 4vw;
+}
+
+.question {
+  background-color: rgb(0, 255, 106);
+  width: 70vw;
+  height: 50vh;
+  margin: auto;
+}
+
+.question-word {
+  margin: 2vw;
+  background-color: rgb(229, 145, 225);
+  border-radius: 20%;
+  width: 10vw;
+  height: 10vh;
+  line-height: 8vh;
+}
+
+.option {
+  margin: 2vw;
+  background-color: aqua;
+  border-radius: 20%;
+  width: 10vw;
+  height: 10vh;
+  line-height: 8vh;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
