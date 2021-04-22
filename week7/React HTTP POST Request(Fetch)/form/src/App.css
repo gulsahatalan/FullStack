@@ -1,0 +1,59 @@
+.App {
+  width: 90vw;
+  margin: auto;
+  text-align: center;
+}
+
+.leftPart {
+  float: left;
+  width: 30vw;
+}
+
+form {
+  background-color: aqua;
+  color: blueviolet;
+}
+
+.rightPart {
+  float: right;
+  width: 60vw;
+  margin: auto;
+}
+
+table {
+  width: 52vw;
+  background-color: rgb(197, 165, 182);
+  margin-left: 6vw;
+}
+
+table td {
+  padding: 1vw;
+  color: rgb(113, 6, 212);
+  width: 8vw;
+  margin: auto;
+}
+
+table th {
+  padding: 1vw;
+  color: rgb(124, 238, 89);
+  width: 8vw;
+  margin: auto;
+}
+
+table tr {
+  width: 40vw;
+  padding: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+tr :nth-child(5) {
+  width: 25vw;
+}
+
+.header {
+  font-family: cursive;
+  font-size: x-large;
+  color: purple;
+}
