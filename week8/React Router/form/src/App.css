@@ -1,0 +1,67 @@
+.App {
+  width: 90vw;
+  margin: auto;
+  text-align: center;
+}
+.home{
+ margin: auto;
+ background-color: rgb(233, 152, 197);
+ width: 90vw;
+ color: darkblue;
+ font-family: cursive;
+}
+
+ul {
+  list-style-type: none;
+  margin: 3vw;
+  background-color: rgb(134, 194, 56);
+padding: 2vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.form {
+  background-color: aqua;
+  color: blueviolet;
+}
+
+
+
+table {
+ 
+  background-color: rgb(197, 165, 182);
+  margin:auto
+}
+
+table td {
+  padding: 1vw;
+  color: rgb(113, 6, 212);
+  width: 8vw;
+  margin: auto;
+}
+
+table th {
+  padding: 1vw;
+  color: rgb(26, 90, 7);
+  width: 8vw;
+  margin: auto;
+}
+
+table tr {
+ 
+  padding: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+tr :nth-child(5) {
+  width: 25vw;
+}
+
+.header {
+  font-family: cursive;
+  padding: 2vw;
+  font-size: x-large;
+  color: rgb(236, 44, 102);
+}
