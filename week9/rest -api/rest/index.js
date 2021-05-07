@@ -1,7 +1,9 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 const app=express();
+import { v4 as uuidv4 } from 'uuid';
 const port=3000;
+
 let data=[
     {
       id: 10002,
@@ -35,11 +37,10 @@ if(movie){
 })
 
 
-let nextID =10004 
+let nextID =uuidv4();
 app.post("/movies", (req, res) =>{
 let newMovie = req.body;
 newMovie.id = nextID;
-nextID++
 data.push(newMovie);
 res.status(200).json(newMovie)
 })
