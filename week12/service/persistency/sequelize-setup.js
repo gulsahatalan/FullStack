@@ -30,9 +30,9 @@ db.student = studentModel(sequelize, Sequelize);
 // create relationship
 // teacher- lecture
 //  db.teacher.hasMany(db.lecture);
- db.enrollment.hasMany(db.teacher);
- db.enrollment.hasMany(db.student);
- db.enrollment.hasMany(db.lecture);
+//  db.enrollment.hasMany(db.teacher);
+//  db.enrollment.hasMany(db.student);
+//  db.enrollment.hasMany(db.lecture);
 
 
 // // create relationship
