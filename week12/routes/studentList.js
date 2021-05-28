@@ -21,9 +21,15 @@ router.get('/:id', async function(req, res, next) {
   res.send(student);
 });
 router.get('/:clas', async function(req, res, next) {
-  let pClas = req.params.class;
+  let pClas = req.params.classe
   const student = await service.getAllStudentsInClas(pClas)
-  res.send(student);
+  res.status(200).send(student);
+});
+router.get('/:clas /:lection', async function(req, res, next) {
+  let pClas = req.params.classe;
+  let pLection=req.params.lection;
+  const student = await service.getAllStudentsInClasByLection(pClas,pLection)
+  res.status(200).send(student);
 });
 router.delete('/:id', async function(req, res, next) {
   let pId = req.params.id;

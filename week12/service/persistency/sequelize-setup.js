@@ -22,45 +22,39 @@ const db = {};
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
-db.lecture = lecturesModel(sequelize, Sequelize);
-db.teacher = teacherModel(sequelize, Sequelize);
+db.lectures = lecturesModel(sequelize, Sequelize);
+db.teachers = teacherModel(sequelize, Sequelize);
 db.enrollment = enrollmentModel(sequelize, Sequelize);
-db.student = studentModel(sequelize, Sequelize);
+db.students = studentModel(sequelize, Sequelize);
 
-// create relationship
-// teacher- lecture
-//  db.teacher.hasMany(db.lecture);
-//  db.enrollment.hasMany(db.teacher);
-//  db.enrollment.hasMany(db.student);
-//  db.enrollment.hasMany(db.lecture);
 
 
 // // create relationship
 // // teacher- lecture
-//  db.teacher.hasMany(db.lecture);
+//  db.teachers.hasMany(db.lectures);
 
 // // teacher- student
-// db.student.belongsToMany(db.teacher,{
-//   through: "students_teacher",
-//   as: "teachers",
-//   foreignKey: "student_id",
-// })
-// db.teacher.belongsToMany(db.student,{
-//   through: "teacher_students",
-//   as: "students",
-//   foreignKey: "teacher_id",
-// })
+db.students.belongsToMany(db.teachers,{
+  through: "students_teacher",
+  as: "teachers",
+  foreignKey: "student_id",
+})
+db.teachers.belongsToMany(db.students,{
+  through: "teacher_students",
+  as: "students",
+  foreignKey: "teacher_id",
+})
 // // lecture- student
-// db.student.belongsToMany(db.lecture,{
-//   through: "Students_Lecture",
-//   as: "lectures",
-//   foreignKey: "student_id",
-// })
-// db.lecture.belongsToMany(db.student,{
-//   through: "Lecture_Students",
-//   as: "Students",
-//   foreignKey: "lecture_id",
-// })
+db.students.belongsToMany(db.lectures,{
+  through: "Students_Lecture",
+  as: "lectures",
+  foreignKey: "student_id",
+})
+db.lectures.belongsToMany(db.students,{
+  through: "Lecture_Students",
+  as: "Students",
+  foreignKey: "lecture_id",
+})
 // use it to force to create the db from scratch 
 //  sync({ force: true })
 db.sequelize.sync().then(() => {

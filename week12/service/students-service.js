@@ -16,6 +16,10 @@ export async function getAllStudents(){
 export async function getAllStudentsInClas(){
     return await studentRepository.getAllStudentsByClas();
 }
+export async function getAllStudentsInClasByLection(){
+    return await studentRepository.getAllByClasAndLection();
+}
+
 export async function getStudentById(pId){
     let movie = await studentRepository.findById(pId)
     return movie;

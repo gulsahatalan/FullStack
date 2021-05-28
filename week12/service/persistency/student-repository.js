@@ -24,16 +24,31 @@ export async function update(pId, pUpdatedStudent){
     where: { id: pId }
   });
 }
-export async function getAllStudentsByClas(){
+export async function getAllStudentsInClas(){
   return await db.students.findAll({
+    subQuery: false,
     include: [ {
-        model: student,
+        model: db.students,
         include: {
-            model: lecture 
+            model: db.lectures 
         }
     } ],
     where: {
-        'student.id': Sequelize.col("teacher.id")
+        'students.id': Sequelize.col("classe.id")
+    }
+  }); 
+}
+export async function gegetAllByClasAndLection(){
+  return await db.students.findAll({
+    subQuery: false,
+    include: [ {
+        model: db.students,
+        include: {
+            model: db.lectures 
+        }
+    } ],
+    where: {
+        'students.id': Sequelize.col("teachers.id")
     }
   }); 
 }

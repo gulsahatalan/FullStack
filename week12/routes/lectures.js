@@ -5,7 +5,7 @@ import * as service from '../service/lectures-service.js'
 /* GET */
 router.get('/', async function(req, res, next) {
   const allLectures = await service.getAllLectures();
-  res.send(allLectures);
+  res.status(200).send(allLectures);
 });
 
 /** Add a new lecture */

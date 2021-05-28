@@ -5,7 +5,7 @@ import * as service from '../service/teacher-service.js'
 /* GET */
 router.get('/', async function(req, res, next) {
   const allTeachers = await service.getAllTeachers();
-  res.send(allTeachers);
+  res.status(200).send(allTeachers);
 });
 
 /** Add a new teacher */
