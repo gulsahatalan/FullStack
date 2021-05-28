@@ -1,35 +1,33 @@
-import * as studentRepository from '../service/persistency/student-repository.js'
+import * as studentRepository from "../service/persistency/student-repository.js";
 // import config from '../environment-config.json'
 
-
-export async function createStudent(pStudent){
-    return await studentRepository.create(pStudent);
+export async function createStudent(pStudent) {
+  return await studentRepository.create(pStudent);
 }
 
-export async function deleteStudent(pId){
-    return await studentRepository.remove(pId);
+export async function deleteStudent(pId) {
+  return await studentRepository.remove(pId);
 }
 
-export async function getAllStudents(){
-    return await studentRepository.getAll();
+export async function getAllStudents() {
+  return await studentRepository.getAll();
 }
-export async function getAllStudentsInClas(){
-    return await studentRepository.getAllStudentsByClas();
+export async function getAllStudentsInClas() {
+  return await studentRepository.getAllStudentsByClas();
 }
-export async function getAllStudentsInClasByLection(){
-    return await studentRepository.getAllByClasAndLection();
-}
-
-export async function getStudentById(pId){
-    let movie = await studentRepository.findById(pId)
-    return movie;
+export async function getAllStudentsInClasByLection() {
+  return await studentRepository.getAllByClasAndLection();
 }
 
-export async function updateStudent(pId, pUpdateStudent){
-    let student = await studentRepository.updateMovie(pId, pUpdateStudent);
-    return student;
+export async function getStudentById(pId) {
+  let movie = await studentRepository.findById(pId);
+  return movie;
 }
 
+export async function updateStudent(pId, pUpdateStudent) {
+  let student = await studentRepository.updateMovie(pId, pUpdateStudent);
+  return student;
+}
 
 // setInterval(function(){
 //     //populate students by using fakerjs

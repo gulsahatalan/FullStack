@@ -159,13 +159,13 @@
         }
       }
     },
-    "/students/{clas,}/{lection}": {
+    "/students/{clas }/{lection}": {
       "get": {
         "tags": [],
         "description": "",
         "parameters": [
           {
-            "name": "clas,",
+            "name": "clas ",
             "in": "path",
             "required": true,
             "type": "string"

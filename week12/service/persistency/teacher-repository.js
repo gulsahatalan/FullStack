@@ -1,26 +1,25 @@
-import db from "./sequelize-setup.js"
+import db from "./sequelize-setup.js";
 
-export async function getAll(){
+export async function getAll() {
   return await db.teachers.findAll();
 }
 
-export async function findById(pId){
+export async function findById(pId) {
   return await db.teachers.findByPk(pId);
 }
 
-export async function create(pTeacher){
+export async function create(pTeacher) {
   return await db.teachers.create(pTeacher);
 }
 
-export async function remove(pId){
+export async function remove(pId) {
   return await db.teachers.destroy({
-    where: { id: pId }
-  })
-}
-
-export async function update(pId, pUpdatedTeacher){
-  return await db.teachers.update(pUpdatedTeacher, {
-    where: { id: pId }
+    where: { id: pId },
   });
 }
 
+export async function update(pId, pUpdatedTeacher) {
+  return await db.teachers.update(pUpdatedTeacher, {
+    where: { id: pId },
+  });
+}

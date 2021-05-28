@@ -1,37 +1,35 @@
-import express from 'express';
+import express from "express";
 var router = express.Router();
-import * as service from '../service/students-service.js'
+import * as service from "../service/students-service.js";
 
-
-router.post('/', async function(req, res, next) {
-  const newStudent = req.body; 
+router.post("/", async function (req, res, next) {
+  const newStudent = req.body;
   const createdStudent = await service.createStudent(newStudent);
   res.status(201).send(createdStudent);
 });
 
-  
-router.get('/', async function(req, res, next) {
+router.get("/", async function (req, res, next) {
   let studentList = await service.getAllStudents();
   res.status(200).send(studentList);
 });
 
-router.get('/:id', async function(req, res, next) {
+router.get("/:id", async function (req, res, next) {
   let pId = req.params.id;
-  const student = await service.getStudentById(pId)
+  const student = await service.getStudentById(pId);
   res.send(student);
 });
-router.get('/:clas', async function(req, res, next) {
-  let pClas = req.params.classe
-  const student = await service.getAllStudentsInClas(pClas)
-  res.status(200).send(student);
-});
-router.get('/:clas /:lection', async function(req, res, next) {
+router.get("/:clas", async function (req, res, next) {
   let pClas = req.params.classe;
-  let pLection=req.params.lection;
-  const student = await service.getAllStudentsInClasByLection(pClas,pLection)
+  const student = await service.getAllStudentsInClas(pClas);
   res.status(200).send(student);
 });
-router.delete('/:id', async function(req, res, next) {
+router.get("/:clas /:lection", async function (req, res, next) {
+  let pClas = req.params.classe;
+  let pLection = req.params.lection;
+  const student = await service.getAllStudentsInClasByLection(pClas, pLection);
+  res.status(200).send(student);
+});
+router.delete("/:id", async function (req, res, next) {
   let pId = req.params.id;
   await service.deleteStudent(pId);
   res.status(200).send({});
