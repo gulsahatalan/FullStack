@@ -1,71 +1,16 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-const app=express();
-import { v4 as uuidv4 } from 'uuid';
-const port=3000;
+import express from "express";
+import router from "./routers/moviesRouter.js";
+import routers from "./routers/rentRouter.js";
 
-let data=[
-    {
-      id: 10002,
-      name: "die hard",
-      year: "1999",
-      genre: "action",
-      income: 10000000
-    },
-    {
-        id: 10003,
-        name: "die light",
-        year: "1998",
-        genre: "comics",
-        income: 11000000
-      }
-    ]
-    
-app.use(bodyParser.json());
-app.get('/', (req, res)=>{
-    res.status(200).json(data)
-})
+const app = express();
+const port = 3000;
+app.use("/movies", router);
+app.use("/rent", routers);
 
-app.get("/movies/:id",(req,res)=>{
-const { id } = req.params;
-const movie = data.find(movie=>movie.id === parseInt(id))
-if(movie){
-    res.status(200).json(movie)
-}else{
-    res.status(404).send("film yok")
-}
-})
+app.get("/", (req, res) => {
+  res.send("HELLO REST API");
+});
 
-
-let nextID =uuidv4();
-app.post("/movies", (req, res) =>{
-let newMovie = req.body;
-newMovie.id = nextID;
-data.push(newMovie);
-res.status(200).json(newMovie)
-})
-
-app.delete("/movies/:id",(req,res) => {
-const deletedMovieId = req.params.id;
-const deletedMovie = data.find(movie=> movie.id === parseInt(deletedMovieId));
-if(deletedMovie){
-data = data.filter(movie => movie.id !==  parseInt(deletedMovieId))  
-res.status(200).end();
-}else{
-    res.status(404).json({errorMessage: "Film Yok"})
-}
-})
-
-app.put("/movies/:id", (req,res)=>{
-   const editMovieId = req.params.id;
-   let editMovie = req.body;
-   let movie = data.find(movie=>movie.id === parseInt(editMovieId))
-   if(movie){
-      
-       res.status(200).send(editMovie);
-
-   }
-})
-
-app.listen(port,()=>console.log(`Server running on port : http://localhost:${port}`));
-
+app.listen(port, () =>
+  console.log(`Server running on port : http://localhost:${port}`)
+);

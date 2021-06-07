@@ -30,8 +30,6 @@ app.use('/lectures', lecturesRouter);
 app.use('/enrollments', enrollmentsRouter);
 app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-
-
 app.listen(3000, ()=>{
     console.log("listening on 3000");
 });
